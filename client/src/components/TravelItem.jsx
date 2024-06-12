@@ -1,4 +1,5 @@
 import React from "react";
+import LinkButton from "./LinkButton";
 
 const TravelItem = ({ data, handleClickTag }) => {
   return (
@@ -78,16 +79,7 @@ const TravelItem = ({ data, handleClickTag }) => {
             />
           </div>
           <div>
-            <a
-              href="#"
-              className="copy-link"
-              onClick={() => {
-                navigator.clipboard.writeText(data.url);
-                alert("Copied!");
-              }}
-            >
-              Link 🔗
-            </a>
+            <LinkButton url={data.url}/>
           </div>
         </div>
       </div>
