@@ -49,9 +49,9 @@ const HomePage = () => {
                 <a className="content-title" href={data.url} target="_blank">
                   {data.title}
                 </a>
-                <div className="content-description">
+                <p className="content-description">
                   {data.description.substring(0, 100)} ...
-                </div>
+                </p>
                 <a href={data.url} target="_blank" className="read">
                   อ่านต่อ
                 </a>
