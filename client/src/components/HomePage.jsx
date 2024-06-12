@@ -8,7 +8,9 @@ const HomePage = () => {
 
   const handleClickTag = (item) => {
     if (searchText.includes(item)) return;
-    setSearchText(searchText + " " + item);
+    searchText.length
+      ? setSearchText(searchText + " " + item)
+      : setSearchText(item);
   };
   return (
     <div className="container">
