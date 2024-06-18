@@ -7,10 +7,11 @@ const HomePage = () => {
   const [searchText, setSearchText] = useState("");
 
   const handleClickTag = (item) => {
-    if (searchText.includes(item)) return;
-    searchText.length
-      ? setSearchText(searchText + " " + item)
-      : setSearchText(item);
+    if (searchText.includes(item)) {
+      return
+    }else{
+      setSearchText(searchText + item + " ")
+    }
   };
   return (
     <div className="container">
