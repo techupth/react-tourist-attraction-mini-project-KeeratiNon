@@ -3,12 +3,14 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import TravelItem from "./TravelItem";
 
+const API_BASE_URL = 'travel-website-pink-sigma.vercel.app';
+
 const TravelList = ({ searchText, handleClickTag }) => {
   const [travelData, setTravelData] = useState([]);
   const getTravelData = async () => {
     try {
       const result = await axios.get(
-        `http://localhost:4001/trips?keywords=${searchText}`
+        `${API_BASE_URL}/trips?keywords=${searchText}`
       );
       setTravelData(result.data.data);
     } catch (error) {
