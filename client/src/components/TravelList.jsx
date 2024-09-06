@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import TravelItem from "./TravelItem";
 
-const API_BASE_URL = 'https://travel-website-three-psi.vercel.app';
+const API_BASE_URL = 'https://travel-website-b3xi.onrender.com';
 
 const TravelList = ({ searchText, handleClickTag }) => {
   const [travelData, setTravelData] = useState([]);
